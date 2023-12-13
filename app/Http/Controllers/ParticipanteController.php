@@ -36,7 +36,7 @@ class ParticipanteController extends Controller
     $ciList = $request->input('ci');
     $nombreList = $request->input('nombre');
 
-    //dd($ciList,$nombreList);
+    
     // Suponiendo que tienes un modelo llamado Participante que representa la tabla de participantes
     foreach ($ciList as $key => $ci) {
         $nombre = $nombreList[$key];
@@ -79,6 +79,35 @@ class ParticipanteController extends Controller
     $eventos = DB::table('eventos')->select('name')->get();
     $participante = Participantes::firstOrCreate(['id' => $id]);
     return view('Participantes.editar', ['eventos' => $eventos, 'participante' => $participante]);
+}
+
+public function update(Request $request, $id)
+{
+    $event = $request->input('rol');
+    $groupName = $request->input('grupo');
+    $ci = $request->input('ci');
+    $nombre = $request->input('nombre');
+    $calificacion = $request->input('calificacion');
+
+    // Suponiendo que tienes un modelo llamado Participante que representa la tabla de participantes
+    $participante = Participantes::find($id);
+    $participante->ci = $ci;
+
+    $usuario = User::where('ci', $ci)->first(); // Suponiendo que existe una relación entre User y Participantes
+    if ($usuario) {
+        $apellido = $usuario->last_name;
+        $participante->apellido = $apellido;
+    }
+
+    $participante->nombre = $nombre;
+    $participante->evento = $event;
+    $participante->grupo = $groupName;
+    $participante->calificacion = $calificacion; // Añadir la calificación
+
+    $participante->save();
+
+
+    return redirect('/events/participe')->with('success', 'Participante actualizado con éxito');
 }
 
 

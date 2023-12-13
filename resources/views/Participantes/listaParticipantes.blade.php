@@ -25,6 +25,7 @@
                 <th>CI</th>
                 <th>Evento</th>
                 <th>Grupo</th>
+                <th>Calificación</th> <!-- Nueva columna para la calificación -->
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -36,15 +37,16 @@
                 <td>{{ $dato->ci }}</td>
                 <td>{{ $dato->evento }}</td>
                 <td>{{ $dato->grupo }}</td>
+                <td>{{ $dato->calificacion }}</td>
                 <td>
                     <button onclick="window.location.href='{{ route('participante.edit', $dato->id) }}'" class="btEditar" >Editar</button>
                     <button onclick="mostrarModal('{{ route('participante.destroy', $dato->id) }}')" class="btEditar">Eliminar</button>
-
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    
     <button onclick="exportarAExcel()">Exportar a Excel</button>
 
 

@@ -20,3 +20,10 @@ ul {
 li {
     margin-bottom: 8px;
 }
+
+@media print {
+    /* Estilo para ocultar el botón al imprimir */
+    button#printButton {
+      display: none;
+    }
+  }

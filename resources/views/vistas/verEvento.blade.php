@@ -36,11 +36,10 @@
 
     <button onclick="imprimirReporte()">Imprimir Reporte</button>
 
-    <script>
-        function imprimirReporte() {
-          window.print();
-        }
-    </script>
-
 </div>
+<script>
+    function imprimirReporte() {
+      window.print();
+    }
+  </script>
 </x-app-layout>

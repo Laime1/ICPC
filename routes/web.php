@@ -58,6 +58,8 @@ Route::get('/events/list/participe',[ParticipanteController::class, 'index'])->n
 Route::post('/participante', [ParticipanteController::class, 'store'])->name('participantes.store');
 Route::get('/events/participe/destroy/{id}', [ParticipanteController::class, 'destroy'])->name('participante.destroy');
 Route::get('/events/participe/{id}', [ParticipanteController::class, 'edit'])->name('participante.edit');
+Route::post('/events/participe/update/{id}', [ParticipanteController::class, 'update'])->name('participante.update');
+
 
 //Reportes
 Route::get('/reports/event', [ReportControler::class, 'reporteEvent'])->name('report.event');

@@ -17,8 +17,16 @@
     <ul>
         @foreach ($participantes as $participante)
             <li>{{ $participante->nombre }} {{ $participante->apellido }}</li>
-        @endforeach
+        @endforeach 
     </ul>
+
+    <button id="printButton" onclick="imprimirReporte()">Imprimir Reporte</button>
+
+    <script>
+        function imprimirReporte() {
+          window.print();
+        }
+    </script>
 </div>
 
 @endsection
