@@ -1,7 +1,6 @@
 <x-app-layout>
 
     <head>
-    
         <!-- css de la libería -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
         <link rel="stylesheet" href="{{asset('style/estilos.css')}}">

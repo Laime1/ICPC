@@ -13,10 +13,14 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-gray-100">
         <x-jet-banner />
 
+<<<<<<< HEAD
         <div class="min-h-screen bg-blue-200">
+=======
+        <div class="min-h-screen">
+>>>>>>> jazz
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

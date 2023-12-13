@@ -17,7 +17,8 @@
     </head>
     <body>
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
+            <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+                
                 <div class="container">
                     <img src="{{ url('umss2.png') }}" class="rounded float-start" width="50" height="30">
 
