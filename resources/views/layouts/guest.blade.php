@@ -22,7 +22,7 @@
                 <div class="container">
                     <img src="{{ url('umss2.png') }}" class="rounded float-start" width="50" height="30">
 
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand text-white" href="{{ url('/') }}">
                         {{ config('app.name', 'ICPC') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -39,11 +39,11 @@
                         <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
     
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                         </ul>
                     </div>

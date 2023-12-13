@@ -25,7 +25,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <img src="{{ url('umss2.png') }}" class="rounded float-start" width="50" height="30">
+                <img src="{{ url('umss2.png') }}" class="rounded float-start" width="60" height="40">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'ICPC') }}
                 </a>

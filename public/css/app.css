@@ -690,7 +690,7 @@ select {
   background: linear-gradient(10deg, #2e73c3, #831631);
   background-size: 500% 500%;
   position: relative;
-  animation: color 12s ease infinite;
+  animation: color 10s ease infinite;
 }
 @keyframes color{
   0%{background-position: 0 50%;}
