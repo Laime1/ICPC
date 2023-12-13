@@ -1,79 +1,45 @@
-/* Estilos para el encabezado "Registro de Usuarios" */
-/*h1 {
+/* Estilos para el formulario */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0ebeb; /* Fondo celeste claro */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 400px; /* Ajusta el ancho máximo según tus preferencias */
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0ebeb; /* Fondo celeste claro */
+    border-radius: 8px;
+}
+/* Estilos para el título */
+h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-    color: gray;
-}
-
-/* Estilos para el formulario */
-form {
-    max-width: 250px;
-    margin: 0 auto;
+    color: #333; /* Texto negro */
 }
 
 /* Estilos para etiquetas y campos de entrada */
 .form-group {
-    position: relative;
     margin-bottom: 20px;
 }
-form b {
-    position: absolute;
-    left: -8px; /* Ajusta la distancia desde el borde izquierdo según tu preferencia */
-    top: 50%; /* Alinea verticalmente en el centro */
-    transform: translateY(-50%); /* Alinea verticalmente en el centro */
-    color: black; /* Puedes ajustar el color del asterisco */
-  }
 
-/*.buttons{
-    text-align: center;
-}
-
-.selected{
-    position: relative;
-    margin-bottom: 20px;
-    color: gray;
-}
-
-/* Estilos para la clase .form-group1 (contenedor de etiqueta e input) */
-.form-group1 {
-    display: flex; /* Configura la visualización como flexbox */
-    align-items: center; /* Centra verticalmente los elementos */
-    margin-bottom: 10px; /* Espacio entre cada .form-group */
-}
-
-/* Estilos para la etiqueta <label> */
-.form-group1 label {
-    flex: 1; /* La etiqueta toma todo el espacio disponible en la fila */
-    margin-right: 10px; /* Espacio entre la etiqueta y el input */
-    font-weight: bold; /* Opcional: Puedes aplicar negrita a la etiqueta */
-}
-
-/* Estilos para el input */
-.form-group1 input {
-    flex: 2; /* El input toma dos veces el espacio que la etiqueta */
-}
-.register{
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center;
-}
-
-p{
-    text-align: center;
-}
-
-label {
+/* Estilos para etiquetas con asterisco */
+.form-group label {
     font-weight: bold;
-}
-span{
-    font-size: 12px;
+    color: #555; /* Texto gris oscuro */
+    display: block; /* Hace que la etiqueta ocupe todo el ancho */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+/* Estilos para campos de entrada */
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -81,38 +47,55 @@ input[type="password"] {
     font-size: 16px;
 }
 
-select{
-    width: 100%;
-    padding: 10px 70px;
-    background-color: white;
-    color: gray;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+/* Estilos para el contenedor de participantes */
+#participantes-container {
+    margin-bottom: 20px;
 }
 
-option{
-    padding: 0px;
+/* Estilos para la sección de participantes */
+.participant-section {
+    margin-top: 20px;
 }
 
+/* Estilos para los inputs de participantes */
+.participant-section .form-group1 {
+    margin-bottom: 15px;
+}
 
-/* Estilos para el botón de enviar */
-/*button[type="submit"],
-      [type="reset"] {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: black;
-    color: #fff;
+/* Estilos para el botón "Añadir Participante" */
+.add-participant {
+    background-color: #f08080; /* Rojo claro */
+    color: #fff; /* Texto blanco */
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
-    background-color: #909aa4;
+/* Estilos para el contenedor de botones */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
 }
-button[type="reset"]:hover {
-    background-color: #909aa4;
+
+/* Estilos para botones "Cancelar" y "Guardar" */
+.btn {
+    background-color: #87ceeb; /* Celeste */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón "Cancelar" */
+.btn-cancelar {
+    background-color: #d3d3d3; /* Gris claro */
+}
+
+/* Estilos para el mensaje de éxito */
+.register p {
+    color: #008000; /* Verde oscuro */
+    font-weight: bold;
 }

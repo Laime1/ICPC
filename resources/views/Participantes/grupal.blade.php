@@ -8,43 +8,53 @@
 
 </head>
 @section('content')
-   <form action="{{ route('participantes.store') }}" method="POST">
-       <h1>Resgistrar participantes</h1>
-       @csrf 
-      <select name="rol" id="rol">
-        <option value="">Evento</option>
-        @foreach($eventos as $event)
-        <option value="{{$event->name}}">{{$event->name}}</option>
-        @endforeach
-       </select>
+<form action="{{ route('participantes.store') }}" method="POST">
+    <h1>Registrar participantes</h1>
+    @csrf
+    
+    <div class="form-group">
+        <label for="rol">Evento</label>
+        <select name="rol" id="rol">
+            <option value="">Seleccionar Evento</option>
+            @foreach($eventos as $event)
+                <option value="{{$event->name}}">{{$event->name}}</option>
+            @endforeach
+        </select>
+    </div>
 
-       <input type="text" name="grupo" id="grupo" placeholder="Nombre del Grupo" >
+    <div class="form-group">
+        <label for="grupo">Nombre del Grupo</label>
+        <input type="text" name="grupo" id="grupo" placeholder="Nombre del Grupo">
+    </div>
 
-    <div id="participantes-container">
-        <label for="">Participantes</label>
+    <div id="participantes-container" class="participant-section">
+        <label for="ci">Participantes</label>
     
-        <input type="text" name="ci[]" id="ci" placeholder="CI" >
-        <input type="text" name='nombre[]'id="nombre" placeholder="Nombre participante"  readonly>
+        <div class="form-group1">
+            <input type="text" name="ci[]" id="ci" placeholder="CI">
+            <input type="text" name='nombre[]' id="nombre" placeholder="Nombre participante" readonly>
+            
+            @foreach($usuarios as $usuario)
+                <input type="hidden" class="usuario" data-ci="{{ $usuario->ci }}" data-nombre="{{ $usuario->name }}">
+            @endforeach
+        </div>
     
-        @foreach($usuarios as $usuario)
-        <input type="hidden" class="usuario" data-ci="{{ $usuario->ci }}" data-nombre="{{ $usuario->name }}">
-        @endforeach
-    
-        <button type="button" class="add-participant">Añadir Participante</button>
+        <button type="button" class="add-participant">Añadir Participante</button><br>
     </div>
     
     <div class="buttons">
-        <button type="reset" class="btn btn-primary">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="reset" class="btn btn-cancelar">Cancelar</button>
+        <button type="submit" class="btn">Guardar</button>
     </div>
 
-    <div class="register" style="display: flex; justify-content: center; align-items: center;">
+    <div class="register">
         @if (session('success'))
             <p>{{session('success')}}</p>
         @endif
     </div>
+</form>
 
-    </form>
+
     <script src="{{ asset('js/buscarCI.js') }}"></script>
     <script src="{{ asset('js/participantes.js') }}"></script>
 @endsection

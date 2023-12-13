@@ -12,6 +12,7 @@
             <li><a href="{{ route('dashboard') }}">Home</a></li>
             <li><b>Eventos</b></li>
       
+            @if(Auth::user()->rol == 'Administrador')
             <li class="dropdown">
                 <input type="checkbox" id="eventos-toggle" class="toggle">
                 <label for="eventos-toggle">Reclutamiento</label>
@@ -20,6 +21,7 @@
                     <li><a href="{{ route('listaDeEventos',['parametro' => 'reclutamiento']) }}">Gestionar Evento</a></li>
                 </ul>
             </li>
+
             <li class="dropdown">
                 <input type="checkbox" id="entrenamiento-toggle" class="toggle">
                 <label for="entrenamiento-toggle">Taller de Entrenamiento</label>
@@ -38,18 +40,27 @@
                     <li><a href="{{ route('listaDeEventos',['parametro' => 'competencia']) }}">Gestionar Evento</a></li>
                 </ul>
             </li>
+            @endif
 
             <li class="dropdown">
                 <input type="checkbox" id="participantes-toggle" class="toggle">
-                <label for="participantes-toggle">Participantes</label>
+                <label for="participantes-toggle">Registrar participantes</label>
                 <ul class="dropdown-content">
                     <li><a href="{{ route('participantes.create') }}">Añadir Participantes(Grupal)</a></li>
                     <li><a href="{{ route('participante.create') }}">Añadir Participantes(Individual)</a></li>
+
+                    @if(Auth::user()->rol == 'Coach' || Auth::user()->rol == 'Administrador')
                     <li><a href="{{ route('participantes.index') }}">Mostrar lista de Participantes</a></li>
+                    @endif
 
                 </ul>
             </li>
+
+            @if(Auth::user()->rol == 'Coach' || Auth::user()->rol == 'Administrador')
+            <ul>
             <li><a href="{{ route('report.event') }}">Reportes</a></li>
+            </ul>
+            @endif
 
         </ul>
     </div>

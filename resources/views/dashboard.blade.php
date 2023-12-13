@@ -23,6 +23,14 @@
             @endforeach
             
         </div>
+        @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+        @endif
+
+        
+            
     
         <!-- script de la libería -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>    

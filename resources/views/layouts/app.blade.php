@@ -16,7 +16,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-blue-200">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -29,11 +29,15 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="custom-main-color"> <!-- Agrega la clase personalizada -->
                 {{ $slot }}
             </main>
         </div>
 
+        <footer class="text-center py-4 bg-gray-200">
+            <!-- Contenido del pie de página -->
+            <p>&copy; 2023 ICPC Sinteg. Todos los derechos reservados.</p>
+        </footer>
         @stack('modals')
 
         @livewireScripts

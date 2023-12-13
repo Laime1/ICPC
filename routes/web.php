@@ -38,6 +38,7 @@ Route::middleware([
 Route::get('image/{id}', [EventController::class, 'showImage'])->name('image.show');//para mostrar la imagen
 Route::get('/view/event/{id}', [EventController::class, 'vistaEvento'])->name('vistaEvento');
 
+
 //Eventos
 Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('/events', [EventController::class, 'store'])->name('events.store');
@@ -47,6 +48,8 @@ Route::get('image/{id}', [EventController::class, 'showImage'])->name('image.sho
 Route::get('/events/edit/{id}', [EventController::class, 'edit'])->name('events.edit');//para el boton editar
 Route::post('/events/update/{id}', [EventController::class, 'update'])->name('events.update');//para actualizar los eventos
 Route::get('/events/destroy/{id}', [EventController::class, 'destroy'])->name('events.destroy');
+Route::get('/events/ruleta', [EventController::class, 'ruleta'])->name('events.ruleta');
+
 
 //participantes
 Route::get('/events/participe', [ParticipanteController::class, 'create'])->name('participantes.create');

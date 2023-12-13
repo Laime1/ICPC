@@ -158,8 +158,8 @@ public function store(Request $request)
  
     public function ruleta()
     {
-      $events = Event::all();
-      return view('dashboard', compact('events'));
+      $eventos = Event::all();      
+      return view('vistas.ruleta', compact('eventos'));
     }
 
     public function showImage($id)

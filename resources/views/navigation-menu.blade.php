@@ -6,23 +6,26 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img src="{{ url('umss1.png') }}" />
                     </a>
                 </div>
 
                 <!-- Enlaces de Navegación -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Tablero') }}
+                        {{ __('Inicio') }}
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('events.create', ['parametro' => 'competencia']) }}" :active="request()->routeIs('eventos.create')">
                         {{ __('Eventos') }}
                     </x-jet-nav-link>
                     
+                    @if(Auth::user()->rol == 'Administrador')
                     <x-jet-nav-link href="{{ route('listaDeUsuarios') }}" :active="request()->routeIs('listaDeUsuarios')">
                         {{ __('Usuarios') }}
                     </x-jet-nav-link>
+                    @endif
+
 
                 </div>
             </div>

@@ -8,7 +8,7 @@
 </head>
 @section('content')
 
-<div class="container block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg">
+<div class="container ">
 
 
     <form method="POST" action="{{ route('events.store') }}" enctype="multipart/form-data">

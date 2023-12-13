@@ -42,7 +42,7 @@ public function create(array $input)
         'password' => ['required', 'string', 'min:8', 'max:20'],
         'phone' => ['required', 'numeric', 'digits_between:8,8'], // Corregido a 'numeric' y 'digits_between'
         'last_name' => ['required', 'string','min:3', 'max:50'],
-        'ci' => ['required', 'string', 'max:50', 'min:8'],
+        'ci' => ['required', 'string', 'max:10', 'min:7'],
         'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
     ])->validate();
 
