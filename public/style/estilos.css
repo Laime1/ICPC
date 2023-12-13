@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    max-width: 700px;
+    margin: auto;
+}
+
+.gallery-cell {
+    width: 100%;
+    max-height: 700px;
+    margin-right: 10px;
+}
+
+.gallery-cell img {
+    width: 100%;
+    height: 500px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen cubra completamente el contenedor */
+}

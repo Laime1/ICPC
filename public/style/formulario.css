@@ -1,0 +1,118 @@
+/* Estilos para el encabezado "Registro de Usuarios" */
+/*h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: gray;
+}
+
+/* Estilos para el formulario */
+form {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* Estilos para etiquetas y campos de entrada */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+form b {
+    position: absolute;
+    left: -8px; /* Ajusta la distancia desde el borde izquierdo según tu preferencia */
+    top: 50%; /* Alinea verticalmente en el centro */
+    transform: translateY(-50%); /* Alinea verticalmente en el centro */
+    color: black; /* Puedes ajustar el color del asterisco */
+  }
+
+/*.buttons{
+    text-align: center;
+}
+
+.selected{
+    position: relative;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/* Estilos para la clase .form-group1 (contenedor de etiqueta e input) */
+.form-group1 {
+    display: flex; /* Configura la visualización como flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 10px; /* Espacio entre cada .form-group */
+}
+
+/* Estilos para la etiqueta <label> */
+.form-group1 label {
+    flex: 1; /* La etiqueta toma todo el espacio disponible en la fila */
+    margin-right: 10px; /* Espacio entre la etiqueta y el input */
+    font-weight: bold; /* Opcional: Puedes aplicar negrita a la etiqueta */
+}
+
+/* Estilos para el input */
+.form-group1 input {
+    flex: 2; /* El input toma dos veces el espacio que la etiqueta */
+}
+.register{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+span{
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select{
+    width: 100%;
+    padding: 10px 70px;
+    background-color: white;
+    color: gray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+option{
+    padding: 0px;
+}
+
+
+/* Estilos para el botón de enviar */
+/*button[type="submit"],
+      [type="reset"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #909aa4;
+}
+button[type="reset"]:hover {
+    background-color: #909aa4;
+}
