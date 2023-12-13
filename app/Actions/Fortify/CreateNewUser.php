@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\WelcomeNotification; // Ajusta el namespace y nombre de la notificación según tu estructura de carpetas
+
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -46,17 +49,20 @@ public function create(array $input)
         'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
     ])->validate();
 
-    return User::create([
+    $user = User::create([
         'name' => $input['name'],
         'email' => $input['email'],
         'password' => Hash::make($input['password']),
-        'phone' => $input['phone'], // Cambiado a 'phone' si tu migración usa 'phone' en lugar de 'telefono'
+        'phone' => $input['phone'],
         'rol' => $input['rol'],
         'ci' => $input['ci'],
         'last_name' => $input['last_name'],
-
-
     ]);
+
+    // Enviar notificación por correo electrónico
+    $user->notify(new WelcomeNotification($user));
+
+    return $user;
 }
 
 }

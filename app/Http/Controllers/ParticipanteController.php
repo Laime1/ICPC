@@ -57,10 +57,10 @@ class ParticipanteController extends Controller
          
     
          // Verificamos si se encontró el usuario
-       /* if ($usuario) {
+        if ($usuario) {
             // Enviar la notificación al usuario
             $usuario->notify(new ParticipanteRegistrado());
-        }*/
+        }
 
     }
 
