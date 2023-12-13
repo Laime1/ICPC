@@ -8,19 +8,14 @@
         <title>{{ config('app.name', 'ICPC') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body class="font-sans antialiased bg-gray-100">
         <x-jet-banner />
 
-<<<<<<< HEAD
         <div class="min-h-screen bg-blue-200">
-=======
         <div class="min-h-screen">
->>>>>>> jazz
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
