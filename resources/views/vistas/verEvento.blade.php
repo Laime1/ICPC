@@ -34,5 +34,13 @@
           <h1> Lugar:</h1>
     </div>
 
+    <button onclick="imprimirReporte()">Imprimir Reporte</button>
+
+    <script>
+        function imprimirReporte() {
+          window.print();
+        }
+    </script>
+
 </div>
 </x-app-layout>

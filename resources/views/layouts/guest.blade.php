@@ -5,17 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'ICPC') }}</title>
 
         <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+         <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-          <script src="{{ asset('js/app.js') }}"></script>
     </head>
-    <body class="bg-blue-200">
-        <div class="font-sans text-gray-900 antialiased">
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
+                <div class="container">
+                    <img src="{{ url('umss2.png') }}" class="rounded float-start" width="50" height="30">
+
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'ICPC') }}
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav me-auto">
+    
+                        </ul>
+    
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto">
+                            <!-- Authentication Links -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="font-sans text-gray-100 antialiased ">
             {{ $slot }}
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
