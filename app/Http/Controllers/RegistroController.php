@@ -8,6 +8,8 @@ use App\Notifications\WelcomeNotification;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
 
 class RegistroController extends Controller
 {
@@ -91,13 +93,18 @@ public function update(Request $request,$id)
 }
 public function destroy($id)
 {
-    //$usuario =Usuario::find($id);
-    $deleted=DB::delete('DELETE FROM users WHERE ci = ?', [$id]);
-    if ($deleted) {
-        //$usuario->delete();
-        return redirect()->route('listaDeUsuarios')->with('success', "Usuario , eliminado correctamente.");
-    } else {
-        return redirect()->route('listaDeUsuarios')->with('error', 'No se pudo encontrar el usuario.');
-    }
+    $usuario = User::where('ci', $id)->first();
+    $nombre = $usuario->name;
+
+$deleted = DB::delete('DELETE FROM users WHERE ci = ?', [$id]);
+
+if ($deleted) {
+    //$usuario->delete();
+    Log::info('Usuario ' . $nombre . ' Eliminado de la aplicacion web.');
+    return redirect()->route('listaDeUsuarios')->with('success', "Usuario eliminado correctamente.");
+} else {
+    return redirect()->route('listaDeUsuarios')->with('error', 'No se pudo encontrar el usuario.');
+}
+
 }
 }

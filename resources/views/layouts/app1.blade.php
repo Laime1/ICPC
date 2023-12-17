@@ -40,6 +40,15 @@
                     <li><a href="{{ route('listaDeEventos',['parametro' => 'competencia']) }}">Gestionar Evento</a></li>
                 </ul>
             </li>
+
+            <li class="dropdown">
+                <input type="checkbox" id="competencia-toggle" class="toggle">
+                <label for="competencia-toggle">Backups y Bitacoras</label>
+                <ul class="dropdown-content">
+                    <li><a href="{{ route('listar.backups') }}" >Backups</a></li>
+                    <li><a href="{{ route('mostrar.logs') }}">Bitacoras</a></li>
+                </ul>
+            </li>
             @endif
 
             <li class="dropdown">

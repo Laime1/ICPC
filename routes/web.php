@@ -6,6 +6,10 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\ParticipanteController;
 use App\Http\Controllers\ReportControler;
+use App\Http\Controllers\BackupController;
+use Illuminate\Support\Facades\Log;
+
+
 
 
 
@@ -82,3 +86,34 @@ Route::get('/events/participe/{id}', [ParticipanteController::class, 'edit'])->n
 //Reportes
 Route::get('/reports/event', [ReportControler::class, 'reporteEvent'])->name('report.event');
 Route::post('/reports/eventos', [ReportControler::class, 'reporteEvent1'])->name('report.event1');
+
+// routes/web.php
+
+Route::get('/descargar-backup/{archivo}', [BackupController::class, 'descargarBackup'])->name('descargar.backup');
+Route::get('/listar-backups', [BackupController::class, 'listarBackups'])->name('listar.backups');
+Route::get('/mostrar-logs', [BackupController::class, 'mostrarLogs'])->name('mostrar.logs');
+
+
+
+Route::get('/limpiar-backups', [BackupController::class, 'limpiarBackups'])->name('limpiar.backups');
+
+
+Route::get('/backup', function () {
+    return view('backup');
+});
+
+Route::post('/backup/run', function () {
+    set_time_limit(120); // Ajusta el tiempo límite según tus necesidades
+
+    // Ejecutar el comando Artisan backup:run
+    $output = shell_exec('php ' . base_path('artisan') . ' backup:run');
+  Log::info('Se ha realizado un backup con éxito');
+
+        // El backup se realizó con éxito
+        return redirect()->back()->with('message', 'Backup completado exitosamente');
+    
+});
+
+
+
+

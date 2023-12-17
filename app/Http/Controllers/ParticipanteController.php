@@ -6,7 +6,7 @@ use App\Notifications\WelcomeNotification;
 use App\Notifications\ParticipanteRegistrado;
 use App\Models\Participantes;
 use App\Models\User;
-use App\Models\Usuario;
+use Illuminate\Support\Facades\Log;
 
 
 
@@ -63,6 +63,7 @@ class ParticipanteController extends Controller
         }
 
     }
+    Log::info('Usuario ' . $nombre . ' registrado como participante del .' .$event);
 
         return redirect('/events/participe')->with('success', 'Participante(s) registrados con éxito');//   realiza alguna acción después de guardar los participantes.
     }

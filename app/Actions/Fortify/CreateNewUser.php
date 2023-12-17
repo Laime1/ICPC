@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use Illuminate\Support\Facades\Log;
+
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\WelcomeNotification; // Ajusta el namespace y nombre de la notificación según tu estructura de carpetas
 
@@ -58,6 +60,8 @@ public function create(array $input)
         'ci' => $input['ci'],
         'last_name' => $input['last_name'],
     ]);
+
+    Log::info('Usuario ' . $input['name'] . ' registrado como participante del .');
 
     // Enviar notificación por correo electrónico
     $user->notify(new WelcomeNotification($user));
