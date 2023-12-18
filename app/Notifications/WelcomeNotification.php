@@ -44,7 +44,7 @@ class WelcomeNotification extends Notification
             ->subject('¡Bienvenido a nuestra aplicación!')
             ->greeting('Hola ' . $notifiable->name)
             ->line('Gracias por registrarte en nuestra aplicación.')
-            ->action('Ir al sitio', url('/'))
+            ->action('Ir al sitio', url('http://sinteg.tis.cs.umss.edu.bo'))
             ->line('Si tienes alguna pregunta, no dudes en contactarnos.');
     }
 

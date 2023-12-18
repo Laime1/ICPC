@@ -48,7 +48,7 @@ html {
 
 
 .custom-main-color {
-  background-color:rgb(212, 240, 240); /* Cambia este color según tus preferencias */
+  background-color:rgb(233, 207, 209); /* Cambia este color según tus preferencias */
 }
 /*
 1. Add the correct height in Firefox.
@@ -690,7 +690,7 @@ select {
 }
 .container {
   width: 100%;
-  background: linear-gradient(10deg, #2e73c3, #831631);
+  background: #831631;
   background-size: 500% 500%;
   position: relative;
   animation: color 12s ease infinite;
@@ -1543,7 +1543,7 @@ select {
 }
 .bg-blue-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  background-color: rgb(233, 207, 209);
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
@@ -1591,7 +1591,7 @@ select {
 }
 .bg-white {
   --tw-bg-opacity: 1;
-  background: linear-gradient(10deg, #2e73c3, #831631);
+  background: linear-gradient(10deg, #e79bae, #831631);
   background-size: 500% 500%;
   position: relative;
   animation: color 12s ease infinite;}
@@ -1784,7 +1784,7 @@ select {
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
-  color: black;
+  color: white;
 }
 .text-gray-800 {
   --tw-text-opacity: 1;

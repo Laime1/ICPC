@@ -61,7 +61,7 @@ public function create(array $input)
         'last_name' => $input['last_name'],
     ]);
 
-    Log::info('Usuario ' . $input['name'] . ' registrado como participante del .');
+    Log::info('Usuario ' . $input['name'] . ' registrado en la aplicacion .');
 
     // Enviar notificación por correo electrónico
     $user->notify(new WelcomeNotification($user));

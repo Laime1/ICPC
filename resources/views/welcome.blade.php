@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -42,22 +42,35 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                        </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <main class="py-4">
+        <div class="container">
+            <div class="row justify-content-center" style="background: rgb(212 240 240 / var(--tw-bg-opacity))">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">{{ __('Bienvenido a nuestra Plataforma de Eventos de Programación') }}</div>
+
+                        <div class="card-body">
+                            <h2>Explora próximas competiciones de programación, talleres y más. Únete a nuestra comunidad de programadores apasionados y lleva tus habilidades al siguiente nivel.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

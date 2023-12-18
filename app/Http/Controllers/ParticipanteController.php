@@ -63,7 +63,7 @@ class ParticipanteController extends Controller
         }
 
     }
-    Log::info('Usuario ' . $nombre . ' registrado como participante del .' .$event);
+        Log::info('Usuario ' . $nombre . ' registrado como participante del .' .$event);
 
         return redirect('/events/participe')->with('success', 'Participante(s) registrados con éxito');//   realiza alguna acción después de guardar los participantes.
     }

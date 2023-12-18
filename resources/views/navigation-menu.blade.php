@@ -16,7 +16,7 @@
                         {{ __('Inicio') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('events.create', ['parametro' => 'competencia']) }}" :active="request()->routeIs('eventos.create')">
+                    <x-jet-nav-link href="{{ route('events.ruleta') }}" :active="request()->routeIs('eventos.create')">
                         {{ __('Eventos') }}
                     </x-jet-nav-link>
                     

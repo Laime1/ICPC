@@ -33,13 +33,5 @@
     <div class="penultimo">
           <h1> Lugar:</h1>
     </div>
-
-    <button onclick="imprimirReporte()">Imprimir Reporte</button>
-
 </div>
-<script>
-    function imprimirReporte() {
-      window.print();
-    }
-  </script>
 </x-app-layout>

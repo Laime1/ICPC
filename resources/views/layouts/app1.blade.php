@@ -72,9 +72,15 @@
             @endif
 
         </ul>
+        
     </div>
+    
     <div class="content">
         @yield('content')
+        <footer>
+            <!-- Contenido del pie de página -->
+            <p style="text-align: center">&copy; 2023 ICPC Sinteg. Todos los derechos reservados.</p>
+        </footer>
     </div>
 </body>
 </html>
