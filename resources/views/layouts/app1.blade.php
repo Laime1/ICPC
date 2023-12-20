@@ -77,9 +77,19 @@
     
     <div class="content">
         @yield('content')
-        <footer>
+        <footer class="text-center py-3">
             <!-- Contenido del pie de página -->
             <p style="text-align: center">&copy; 2023 ICPC Sinteg. Todos los derechos reservados.</p>
+            <style>
+                footer{
+                    background-color:#617CF8;
+                    color: white;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100px;
+                    align-self: flex-end;
+                }
+                </style>
         </footer>
     </div>
 </body>

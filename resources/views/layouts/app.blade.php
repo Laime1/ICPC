@@ -33,9 +33,19 @@
             </main>
         </div>
 
-        <footer class="text-center py-4 bg-gray-200">
+        <footer class="text-center position-f py-3">
             <!-- Contenido del pie de página -->
             <p>&copy; 2023 ICPC Sinteg. Todos los derechos reservados.</p>
+            <style>
+            footer{
+                background-color:  #B93A5A;
+                color: white;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                align-self: flex-end;
+            }
+            </style>
         </footer>
         @stack('modals')
 

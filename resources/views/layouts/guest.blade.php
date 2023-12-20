@@ -55,5 +55,19 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        <footer class="text-center position-f py-3">
+            <!-- Contenido del pie de página -->
+            <p>&copy; 2023 ICPC Sinteg. Todos los derechos reservados.</p>
+            <style>
+            footer{
+                background-color:#B93A5A;
+                color: white;
+              bottom: 0;
+              width: 100%;
+              height: 50px;
+              align-self: flex-end;
+            }
+            </style>
+        </footer>
     </body>
 </html>
