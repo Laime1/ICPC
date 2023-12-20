@@ -28,8 +28,6 @@
                 <ul class="dropdown-content">
                     <li><a href="{{ route('events.create',['parametro' => 'entrenamiento']) }}" >Crear Evento</a></li>
                     <li><a href="{{ route('listaDeEventos',['parametro' => 'entrenamiento']) }}">Gestionar Evento</a></li>
-                    <li><a href="{{ route('participante.create',['parametro' => 'entrenamiento']) }}">Añadir Participantes</a></li>
-
                 </ul>
             </li>
             <li class="dropdown">

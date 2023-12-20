@@ -104,7 +104,7 @@
         <h2>Realizar Backup</h2>
         <form method="post" action="{{ url('/backup/run') }}">
             @csrf
-            <button type="submit">Ejecutar Backup</button>
+            <button type="submit">Actualizar Backup</button>
         </form>
 
         @if (session('message'))
@@ -125,10 +125,6 @@
         </div>
     @endif
 
-        <form method="get" action="{{ route('limpiar.backups') }}">
-            @csrf
-            <button type="submit" onclick="return confirm('¿Estás seguro de que quieres eliminar todos los backups?')">Limpiar Backups</button>
-        </form>
 
     </div>
 

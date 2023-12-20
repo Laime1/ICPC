@@ -25,7 +25,7 @@ class BackupController extends Controller
     public function listarBackups()
 {
     // Obtener la lista de archivos en el directorio
-    $archivos = Storage::files('ICPC');
+    $archivos = Storage::files('/backup-temp/temp/db-dumps');
 
     return view('backupLogs.backups', compact('archivos'));
 }
@@ -60,7 +60,7 @@ if (file_exists($logPath)) {
 
     public function descargarBackup($archivo)
     {
-        $rutaArchivo = storage_path("app/ICPC/{$archivo}");
+        $rutaArchivo = storage_path("app/backup-temp/temp/db-dumps/{$archivo}");
 
         return response()->download($rutaArchivo);
     }
